@@ -3,26 +3,25 @@
 let computerPlay;
 let playerChoice;
 
-// constant for 3 choices used in computer function
+// function to get choice and store it
 
-const computerSelection = ["rock" , "paper" , "scissors"];
-
-// function used for computer to choose between 3 choices "rock paper scissors"
-
-function getComputerChoice() {
-    return computerSelection [ Math.random() * computerSelection.length ] 
+function getCPUChoice() {
+    const computerSelection = ["rock" , "paper" , "scissors"];
+    const randomCPU = computerSelection[Math.floor(Math.random() * computerSelection.length)];
+    return randomCPU
 };
 
-// function to get player choice
+// function to get player input & const to prompt / store input
 
-function getPlayerChoice(){
-    console.prompt('Rock Paper or Scissors?')
-}
+function getPlayerChoice() {
+    const userInput = prompt('Rock, Paper, or Scissors? ');
+};
 
 // function to play a round of rock paper scissors
 
-function playRound(playerChoice , computerSelection) {
-    computerPlay = computerSelection().toLowerCase();
-}
+function playRound() {
+    computerPlay = getCPUChoice().toLowerCase();
+    playerChoice = getPlayerChoice().toLowerCase();
+};
 
-console.log()
+// save for later document.getElementById('results').innerHTML = "The winner is " + playerChoice + computerPlay ;
