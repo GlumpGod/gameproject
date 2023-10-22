@@ -46,7 +46,4 @@ function playRound() {
     console.log(result);
 };
 
-
-// rock > scissors , scissors > paper , paper > rock
-
 // save for later document.getElementById('results').innerHTML = "The winner is " + playerChoice + computerPlay 
