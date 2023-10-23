@@ -19,10 +19,19 @@
     text-align: center;
 }
 
-.buttonDiv {
+#inputForm {
     width: auto;
     display: flex;
     justify-content: center;
+}
+
+#inputText {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+#inputBtn {
+    background-color: aliceblue;
 }
 
 .scoreDiv {
@@ -40,9 +49,4 @@
 
 .cpuScore {
     max-width: 350px;
-}
-
-.play {
-    background-color: white;
-    align-self: end;
 }

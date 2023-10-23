@@ -3,6 +3,9 @@
 let computerPlay;
 let playerChoice;
 let result;
+const answer = document.getElementById('inputText');
+const submit = document.getElementById('inputBtn');
+const output = document.getElementById('output');
 
 // function to get choice and store it
 
@@ -12,14 +15,7 @@ function getCPUChoice() {
     return randomCPU.toLowerCase()
 };
 
-// function to get player input & const to prompt / store input
-
-function getPlayerChoice() {
-    const userInput = prompt('Rock, Paper, or Scissors? ');
-    return userInput.toLowerCase()
-};
-
-// code for win condition
+// function for win condition
 
 function results() {
     
@@ -39,11 +35,13 @@ function results() {
 
 function playRound() {
     computerPlay = getCPUChoice();
-    playerChoice = getPlayerChoice();
+    playerChoice = answer.value.toLowerCase();
     result = results();
     console.log(computerPlay);
     console.log(playerChoice);
     console.log(result);
 };
 
-// save for later document.getElementById('results').innerHTML = "The winner is " + playerChoice + computerPlay 
+// event listener for button click
+
+submit.addEventListener('click', playRound);

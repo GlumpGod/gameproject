@@ -21,17 +21,21 @@
     </div>
 
     <div class="scoreDiv">
-        <h2 class="playerScore">PLAYER : </h2>
-        <h2 class="cpuScore">COMPUTER : </h2> 
+        <h2 class="playerScore">PLAYER : <p id="playerCount"></p></h2>
+        
+        <h2 class="cpuScore">COMPUTER : <p id="cpuCount"></p></h2> 
     </div>
 
-    <div class="buttonDiv">
-        <button type="button" class="play" onclick="playRound()">PLAY</button>
-        <p id="results"></p>
+    <div id="results">
+        <p id="output"></p>
+    </div>
+
+    <div id="inputForm">
+        <input type="text" id="inputText" placeholder="Rock Paper or Scissors?">
+
+        <input type="button" id="inputBtn" value="Submit Answer">
     </div>
 
     <script src="index.js"></script>
 </body>
 </html>
-
-<!-- rock paper scissor images from https://thenounproject.com/ -->
